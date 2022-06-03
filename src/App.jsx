@@ -1,12 +1,13 @@
-import QuestionIndex from '../components/QuestionIndex'
+import HandlingQuiz from '../components/HandlingQuiz'
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      <QuestionIndex />
+      <HandlingQuiz />
     </div>
+
   )
 }
 

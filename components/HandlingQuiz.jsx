@@ -1,6 +1,9 @@
 import React from 'react'
 
-function QuestionIndex() {
+function HandlingQuiz() {
+    // Define a state variable here to track question status
+    const [currentIndex, setCurrentIndex] = useState(0)
+
     const questions = [
         {
             questionText: 'What is the capital of France?',
@@ -40,17 +43,20 @@ function QuestionIndex() {
         },
     ]
 
-    // Define function body to increment the question index variable
     function handleAnswerClick() {
-        setCurrentIndex((value) => value + 1)
+        // Check if the quiz is over here
+        currentIndex == 3 ? setQuizFinished(true) : setCurrentIndex((value) => value + 1)
+        // If yes, set the quizFinished variable to true
+
+        // If no, increment the current index like always
+
     }
 
-    // Define a state variable here to track question status
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const [quizFinished, setQuizFinished] = useState(false)
 
     return (
         <div className="app">
-            {false ? (
+            {quizFinished ? (
                 <div className="score-section">
                     You scored 1 out of {questions.length}
                 </div>
@@ -58,7 +64,7 @@ function QuestionIndex() {
                 <>
                     <div className="question-section">
                         <div className="question-count">
-                            <span>Question 1</span>/{questions.length}
+                            <span>Question {currentIndex}</span>/{questions.length}
                         </div>
                         {/* You should change the "0" here to a state variable */}
                         <div className="question-text">
@@ -70,7 +76,10 @@ function QuestionIndex() {
                         {questions[currentIndex].answerOptions.map((answer) => {
                             // Add onClick listener to this button
                             return (
-                                <button key={answer.answerText} onClick={handleAnswerClick}>
+                                <button
+                                    onClick={handleAnswerClick}
+                                    key={answer.answerText}
+                                >
                                     {answer.answerText}
                                 </button>
                             )
@@ -81,5 +90,4 @@ function QuestionIndex() {
         </div>
     )
 }
-
-export default QuestionIndex
+export default HandlingQuiz
