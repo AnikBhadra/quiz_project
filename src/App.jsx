@@ -1,11 +1,11 @@
-import HandlingQuiz from '../components/HandlingQuiz'
+import CalScore from '../components/CalScore'
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      <HandlingQuiz />
+      <CalScore />
     </div>
 
   )
