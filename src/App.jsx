@@ -1,11 +1,11 @@
-import CalScore from '../components/CalScore'
+import QuestionIndex from '../components/QuestionIndex'
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      <CalScore />
+      <QuestionIndex />
     </div>
 
   )
