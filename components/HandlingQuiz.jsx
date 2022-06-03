@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function HandlingQuiz() {
     // Define a state variable here to track question status
