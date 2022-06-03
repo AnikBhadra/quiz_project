@@ -1,11 +1,11 @@
-import QuestionDynamically from '../components/QuestionDynamically'
+import AnsDynamically from '../components/AnsDynamically'
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      <QuestionDynamically />
+      <AnsDynamically />
     </div>
   )
 }
